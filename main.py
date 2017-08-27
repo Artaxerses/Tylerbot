@@ -22,7 +22,7 @@ async def hello():
 async def prime():
 	listLength = len(quotes) 
 	randomInteger = randint(0, listLength)
-	await bot.say(quotes[randomInteger])
+	await bot.say('/tts' + quotes[randomInteger])
 
 bot.run('MzUwMTI2MzEwMDk1MzIzMTM4.DH_h_g.jxUX0josU7SPHqBCZwb4N-yGSf8')
 
