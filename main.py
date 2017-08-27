@@ -16,7 +16,7 @@ async def on_ready():
 
 @bot.command()
 async def hello():
-	await bot.say("Hello$")
+	await bot.say("Hey")
 
 @bot.command()
 async def prime():
