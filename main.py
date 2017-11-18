@@ -35,4 +35,4 @@ async def tyler():
     await bot.say(quotes[index])
     index += 1
 
-bot.run('MzUxMTgxMjY4NjcyNzA4NjIw.DIPdzA.S2CoSYekiQEUXw7rzywufihhyR4')
+bot.run('//insert key here)
