@@ -34,13 +34,15 @@ async def on_reaction_add(reaction, user):
 async def hello():
     await bot.say("Hey")
 
-@bot.command()
-async def tylerdanh(arg):
+@bot.command(pass_context = True)
+async def tylerdanh(ctx):
     quotes = []
     with open("quotes.txt", 'r') as quotefile:
         for line in quotefile:
             quotes.append(line.strip())
-    await bot.say(quotes[arg])
+    if ctx > len(quotes):
+        await bot.say(quotes[0])
+    await bot.say(quotes[ctx])
 
 @bot.command()
 async def tyler():
