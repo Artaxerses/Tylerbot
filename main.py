@@ -34,15 +34,13 @@ async def on_reaction_add(reaction, user):
 async def hello():
     await bot.say("Hey")
 
-@bot.command(pass_context = True)
-async def tylerdanh(ctx):
+@bot.command()
+async def tylerdanh(arg):
     quotes = []
     with open("quotes.txt", 'r') as quotefile:
         for line in quotefile:
             quotes.append(line.strip())
-    if ctx > len(quotes):
-        await bot.say(quotes[0])
-    await bot.say(quotes[ctx])
+    await bot.say(quotes[arg])
 
 @bot.command()
 async def tyler():
@@ -60,4 +58,5 @@ async def shutdown(ctx):
     else:
         await bot.say('That sounds like a threat!')
 
-bot.run('MzUxMTgxMjY4NjcyNzA4NjIw.DIPdzA.S2CoSYekiQEUXw7rzywufihhyR4')
+bot.run('super secret token here')
+
